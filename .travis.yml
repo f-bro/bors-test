@@ -16,7 +16,7 @@ matrix:
   allow_failures:
     - rust: nightly
 script:
-  - rustup component add rustfmt-preview
-  - cargo fmt -- --write-mode diff
   - cargo build --verbose --all
   - cargo test --verbose --all
+  - rustup component add rustfmt-preview
+  - cargo fmt -- --write-mode diff
