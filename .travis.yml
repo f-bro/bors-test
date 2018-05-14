@@ -15,8 +15,10 @@ rust:
 matrix:
   allow_failures:
     - rust: nightly
+    - rust: stable # cargo fmt --all -- --write-mode=check doesn't work with the current stable
+before_script:
+  - rustup component add rustfmt-preview
 script:
+  - cargo fmt --all -- --write-mode=check
   - cargo build --verbose --all
   - cargo test --verbose --all
-  - rustup component add rustfmt-preview
-  - cargo fmt -- --write-mode diff
