@@ -6,5 +6,6 @@ fn main() {
     println!("Hello, Bors2!");
     println!("Miau");
     let x = 4;
-    println!("{}",     x);
+    
+    println!("{}", x);
 }
