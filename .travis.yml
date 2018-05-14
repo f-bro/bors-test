@@ -8,7 +8,13 @@ branches:
     - master
 
 language: rust
-
+rust:
+  - stable
+  - beta
+  - nightly
+matrix:
+  allow_failures:
+    - rust: nightly
 script:
   - rustup component add rustfmt-preview
   - cargo fmt -- --write-mode diff
