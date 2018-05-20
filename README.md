@@ -1,1 +1,2 @@
 # bors-test
+test
